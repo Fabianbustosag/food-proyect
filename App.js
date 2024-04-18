@@ -13,15 +13,32 @@ import HomeScreen from './screens/HomeScreen';
 import DetailsScreen from './screens/DetailsScreen';
 import ScanScreen from './screens/ScanScreen';
 import DashboardScreen from './screens/DashboardScreen';
+import InfoFoodScreen from './screens/InfoFoodScreen';
+import InicioSesion from './screens/InicioSesion';
+
+
+const Tab = createBottomTabNavigator();
+
 
 // const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
+
+// function MyStack() {
+//   return (
+//     <Stack.Navigator>
+//       <Stack.Screen name="InfoFoodScreen" component={InfoFoodScreen} />
+//     </Stack.Navigator>
+//   );
+// }
+
 
 function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Inicio" component={HomeScreen} 
+
+    {/* <MyStack /> */}
+
+      <Tab.Navigator initialRouteName='HomeScreen'>
+        <Tab.Screen name="HomeScreen" component={HomeScreen} 
         options={{
             tabBarIcon: ({ color, size }) => (
               <FontIcon name="home" size={30} color="#000" />
@@ -43,13 +60,20 @@ function App() {
                   }} 
         />
         <Tab.Screen name="DashboardScreen" component={DashboardScreen}
-                options={{
-                  tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="chart-bar" color="#000" size={30}/>
-                    ),
-                  }} 
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="chart-bar" color="#000" size={30}/>
+              ),
+            }} 
         />
-      </Tab.Navigator>
+        <Tab.Screen name="InicioSesion" component={InicioSesion}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="account" color="#000" size={30}/>
+              ),
+            }} 
+        />
+      </Tab.Navigator>     
     </NavigationContainer>
   );
 }
