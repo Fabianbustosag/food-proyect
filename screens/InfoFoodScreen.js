@@ -9,7 +9,23 @@ import { View, Text, Button } from 'react-native';
 function InfoFoodScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>InfoFoodScreen</Text>
+      <Text>
+        Producto: Pan{'\n'}
+        Categoria:{'\n'}  
+        Fecha ingreso producto:{'\n'}
+        Alarma: 10:10 20/04/2024 {'\n'}
+        Cantidad Actual: {'\n'}
+        Costo producto $2.000 {'\n'}
+      </Text>
+      <Button
+        title="Producto Vencido"
+        onPress={()=>{}}
+      />
+      <Text></Text>
+      <Button
+        title="Producto Consumido"
+        onPress={()=>{}}
+      />
     </View>
   );
 }

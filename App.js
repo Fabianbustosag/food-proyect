@@ -20,15 +20,16 @@ import InicioSesion from './screens/InicioSesion';
 const Tab = createBottomTabNavigator();
 
 
-// const Stack = createStackNavigator();
+const Stack = createStackNavigator();
 
-// function MyStack() {
-//   return (
-//     <Stack.Navigator>
-//       <Stack.Screen name="InfoFoodScreen" component={InfoFoodScreen} />
-//     </Stack.Navigator>
-//   );
-// }
+function MyStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="DetailsScreenMain" component={DetailsScreen} options={ {headerShown: false} } />
+      <Stack.Screen name="InfoFoodScreen" component={InfoFoodScreen} />
+    </Stack.Navigator>
+  );
+}
 
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
               ),
             }} 
         />
-        <Tab.Screen name="Productos" component={DetailsScreen} 
+        <Tab.Screen name="DetailsScreen" component={MyStack} 
                 options={{
                   tabBarIcon: ({ color, size }) => (
                     <MaterialCommunityIcons name="baguette" color="#000" size={30}/>

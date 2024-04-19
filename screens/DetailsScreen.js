@@ -5,8 +5,6 @@ import { Image, FlatList, StyleSheet, View, Text, Button } from 'react-native';
 import { ListItem } from '@rneui/themed';
 import { Avatar } from '@rneui/themed';
 import { Icon } from '@rneui/themed';
-// import { Icon } from 'react-native-elements'
-// import SvgUri from 'react-native-svg-uri';
 
 const styles = StyleSheet.create({
     container: {
@@ -20,7 +18,7 @@ const styles = StyleSheet.create({
     },
   });
 
-const DetailsScreen = () => (
+const DetailsScreen = ({navigation}) => (
   <>
     <ListItem bottomDivider>
       <Image style={{ width: 100, height: 100 }} source={require('..\\assets\\imgs\\Bread.jpg')} />
@@ -30,7 +28,8 @@ const DetailsScreen = () => (
       </ListItem.Content>
       <Button
         title="Info"
-        onPress={()=>{} } />
+        onPress={() => navigation.navigate('InfoFoodScreen')}
+      />
     </ListItem>
 
 
