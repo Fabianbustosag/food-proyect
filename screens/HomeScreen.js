@@ -8,10 +8,10 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-    <Image style={{ width: 100, height: 100 }} source={require('..\\assets\\imgs\\Bread.jpg')} />
     <Text></Text>
-    <Text style={styles.TextoInformacion}>Bienvenido "Fabian"</Text>
+    <Text style={styles.TextoInformacion}>Hola Fabian</Text>
     <Text style={styles.TextoInformacion}>Dinero ahorrado : $40.000</Text>
+    <Text style={styles.TextoInformacion}>Dinero almacenado : $140.000</Text>
 
     <View style={styles.row}>
       <TouchableOpacity style={[styles.TouchableOpacity]}>
